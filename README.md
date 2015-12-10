@@ -19,8 +19,10 @@ Also, as in Muenchen and many other themes, minified stylesheets can be loaded b
 ## Contributors
 
 * [@inpsyde](https://github.com/inpsyde)
-* [@dasllama](https://github.com/dasllama)
 * [@Deku86](https://github.com/Deku86)
+* [@tinabillinger](https://github.com/tinabillinger)
+* [@nick](https://github.com/nick)
+* [@twern](https://github.com/twern)
 
 **Brought to you by**
 
