@@ -48,7 +48,7 @@ function munich_child_setup() {
 		get_stylesheet_directory() . '/languages'
 	);
 
-	if( !is_admin() ){
+	if ( ! is_admin() ) {
 
 		// child theme styles
 		add_filter( 'munich_get_styles', 'munich_child_filter_munich_get_styles_add_stylesheets' );
@@ -60,8 +60,10 @@ function munich_child_setup() {
  * Adding our own styles for our child theme
  *
  * @wp-hook munich_get_styles
- * @param   Array $styles
- * @return  Array $styles
+ *
+ * @param   array $styles
+ *
+ * @return  array $styles
  */
 function munich_child_filter_munich_get_styles_add_stylesheets( array $styles = array() ) {
 
@@ -73,10 +75,10 @@ function munich_child_filter_munich_get_styles_add_stylesheets( array $styles = 
 
 	// adding our own styles to
 	$styles[ 'munich_child' ] = array(
-		'src'       => get_stylesheet_directory_uri() . '/style' . $suffix . '.css',
-		'deps'      => NULL,
-		'version'   => $theme_data->Version,
-		'media'     => NULL
+		'src'     => get_stylesheet_directory_uri() . '/style' . $suffix . '.css',
+		'deps'    => NULL,
+		'version' => $theme_data->Version,
+		'media'   => NULL,
 	);
 
 	return $styles;
