@@ -8,7 +8,7 @@
  * @author     marketpress.com
  */
 
-add_action( 'after_setup_theme', 'munich_child_setup' );
+add_action( 'after_setup_theme', 'muenchen_child_setup' );
 /**
  * Sets up theme defaults and registers support for various WordPress features
  * of Muenchen Child Theme.
@@ -20,7 +20,7 @@ add_action( 'after_setup_theme', 'munich_child_setup' );
  * @since   05/07/2015
  * @return  void
  */
-function munich_child_setup() {
+function muenchen_child_setup() {
 
 	/* The .min suffix for stylesheets and scripts.
 	 *
@@ -31,8 +31,8 @@ function munich_child_setup() {
 	 * If you want your child theme to default on minified stylesheets and scripts,
 	 * set the following filter:
 	 *
-	 * if( function_exists( 'munich_get_script_suffix' ) ) {
-	 *     add_filter( 'munich_child_starter_get_script_suffix', 'munich_get_script_suffix' );
+	 * if( function_exists( 'muenchen_get_script_suffix' ) ) {
+	 *     add_filter( 'muenchen_child_starter_get_script_suffix', 'muenchen_get_script_suffix' );
 	 * }
 	 *
 	 * Don’t forget to actually add applicable .min files to your child theme first!
@@ -51,7 +51,7 @@ function munich_child_setup() {
 	if ( ! is_admin() ) {
 
 		// child theme styles
-		add_filter( 'munich_get_styles', 'munich_child_filter_munich_get_styles_add_stylesheets' );
+		add_filter( 'muenchen_get_styles', 'muenchen_child_filter_muenchen_get_styles_add_stylesheets' );
 
 	}
 }
@@ -59,22 +59,22 @@ function munich_child_setup() {
 /**
  * Adding our own styles for our child theme
  *
- * @wp-hook munich_get_styles
+ * @wp-hook muenchen_get_styles
  *
  * @param   array $styles
  *
  * @return  array $styles
  */
-function munich_child_filter_munich_get_styles_add_stylesheets( array $styles = array() ) {
+function muenchen_child_filter_muenchen_get_styles_add_stylesheets( array $styles = array() ) {
 
 	// add suffix
-	$suffix = apply_filters( 'munich_child_starter_get_script_suffix', '' );
+	$suffix = apply_filters( 'muenchen_child_starter_get_script_suffix', '' );
 
 	// getting the theme-data
 	$theme_data = wp_get_theme();
 
 	// adding our own styles to
-	$styles[ 'munich_child' ] = array(
+	$styles[ 'muenchen_child' ] = array(
 		'src'     => get_stylesheet_directory_uri() . '/style' . $suffix . '.css',
 		'deps'    => NULL,
 		'version' => $theme_data->Version,
