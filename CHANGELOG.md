@@ -1,4 +1,7 @@
 # Changelog
+## 1.0.2
+ * changed readme
+
 ## 1.0.1
  * rename functions
 

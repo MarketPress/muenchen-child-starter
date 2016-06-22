@@ -5,7 +5,7 @@
  * @package    WordPress
  * @subpackage Muenchen_Child
  * @version    1.0
- * @author     marketpress.com
+ * @author     MarketPress
  */
 
 add_action( 'after_setup_theme', 'muenchen_child_setup' );
